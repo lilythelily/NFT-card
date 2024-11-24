@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Big+Shoulders+Display:wght@100..900&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Lexend+Deca:wght@100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Young+Serif&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  font-size: 18px;
+  background: var(--very-dark-blue);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+:root {
+  --blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --very-dark-blue: hsl(217, 54%, 11%);
+  --card-bg: hsl(216, 50%, 16%);
+  --line-blue: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+
+.hero {
+  border-radius: 10px;
+  width: 320px;
+  height: 320px;
+}
+
+h1 {
+  color: var(--white);
+  font-size: 24px;
+  font-weight: 400;
+  transition: 0.5s ease;
+}
+
+h1:hover {
+  color: var(--cyan);
+  cursor: pointer;
+}
+
+h2 {
+  color: var(--blue);
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.eth {
+  color: var(--cyan);
+}
+
+.days {
+  color: var(--blue);
+  font-weight: 300;
+}
+
+.avatar {
+  width: 30px;
+  border-radius: 100%;
+  border: 1.5px solid hsla(0, 0%, 100%, 0.7);
+}
+
+.creation {
+  color: var(--blue);
+  font-weight: 300;
+}
+
+.name {
+  color: var(--white);
+  transition: 0.5s ease;
+}
+
+.name:hover {
+  color: var(--cyan);
+  cursor: pointer;
+}
+
+.icon-name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.days-left,
+.icon-eth {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.eth-days {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--line-blue);
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 320px;
+  margin-top: 24px;
+}
+
+main {
+  background-color: var(--card-bg);
+  display: inline-flex;
+  flex-direction: column;
+  padding: 30px 28px;
+  border-radius: 20px;
+  margin-bottom: 40px;
+  box-shadow: 2px 2px 6px 2px hsla(213, 60%, 3%, 0.2);
+}
+
+.overlay {
+  background-color: hsla(178, 100%, 50%, 0.4);
+  transition: 0.5s;
+  position: absolute;
+  opacity: 0;
+  z-index: 0;
+  width: 320px;
+  height: 320px;
+  border-radius: 10px;
+  transition: 0.5s ease-in-out;
+}
+
+.overlay:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.eye {
+  transition: 0.5s;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 320px;
+  height: 320px;
+  z-index: 10;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: hsl(215, 32%, 27%);
+  margin-bottom: 24px;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (max-width: 500px) {
+  article {
+    gap: 10px;
+    width: 400px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  main {
+    width: 90vw;
+  }
+
+  .overlay,
+  .eye,
+  .hero {
+    width: 400px;
+    height: 400px;
+  }
+}
